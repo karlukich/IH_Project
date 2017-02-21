@@ -44,3 +44,7 @@ h3 {
 .modal.in .modal-dialog {
     width: 33%;
 }
+
+.btn_sign {
+    margin-top: 10px;
+}

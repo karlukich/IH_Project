@@ -21,7 +21,7 @@
                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                  <ul class="nav navbar-nav navbar-right">
                    <li><a id="login" href="#myModal_login" data-toggle="modal">Login</a></li>
-                   <li><a id="register" href="#myModal" data-toggle="modal">Registrarse</a></li>
+                   <li><a id="register" href="#myModal_register" data-toggle="modal">Registrarse</a></li>
                    <li><a href="#">Quienes somos</a></li>
                    <li><a href="#">Condiciones</a></li>
                   </ul>
@@ -49,57 +49,35 @@
                       <hr class="hr-or">
                       <span class="span-or">o</span>
                   </div>
-                  <form role="form">
-                    <div class="form-group">
-                      <label for="inputUsernameEmail">Email</label>
-                      <input type="text" class="form-control" id="inputUsernameEmail">
-                    </div>
-                    <div class="form-group">
-                      <a class="pull-right" href="#">Recuperar contraseña?</a>
-                      <label for="inputPassword">Password</label>
-                      <input type="password" class="form-control" id="inputPassword">
-                    </div>
-                    <div class="checkbox pull-right">
-                      <label>
-                        <input type="checkbox">
-                          Recuerdame </label>
-                    </div>
-                    <button type="submit" class="btn btn btn-primary">
-                      Acceder
-                    </button>
-                </form>
+                <%= render "devise/shared/login" %>
             </div>
         </div>
       </div>
   </div>
 <!-- modal for register -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="myModal_register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h3>Registrate!</h3>
-                  <form role="form">
-                    <div class="form-group">
-                      <label for="register_name">Nombre:</label>
-                      <input type="text" class="form-control" id="register_name">
-                      <label for="register_email">Email:</label>
-                      <input type="text" class="form-control" id="register_email">
-                      <label for="register_pass">Password:</label>
-                      <input type="text" class="form-control" id="register_pass">
-                      <label for="register_pass_confirmation">Repite Password:</label>
-                      <input type="text" class="form-control" id="register_pass_confirmation">
-                    </div>
-                    <button type="submit" class="btn btn btn-primary">
-                      Registarse
-                    </button>
-                </form>
+                <h3>Registrate y empieza a jugar!</h3>
+                <%= render "devise/shared/signin" %>
             </div>
         </div>
     </div>
 </div>
-
-
+<!-- modal for recovery_pass -->
+<div class="modal fade" id="recovery_pass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3>Recuperar contraseña</h3>
+                <%= render "devise/shared/recoverypass" %>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- devise_login -->
   </header>
   <div class="row">
