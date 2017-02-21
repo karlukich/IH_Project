@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <h1>Estas en menu_top branch</h1>
     <% if user_signed_in? %>
       <h2> Welcome <%= current_user.name %>!</h2>
       <%= link_to 'Logout', destroy_user_session_path, method: 'DELETE' %>
