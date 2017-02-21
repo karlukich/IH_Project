@@ -20,9 +20,9 @@
                </div>
                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                  <ul class="nav navbar-nav navbar-right">
-                   <li><a id="login" href="#myModal_login" data-toggle="modal">Login</a></li>
-                   <li><a id="register" href="#myModal_register" data-toggle="modal">Registrarse</a></li>
-                   <li><a id="logout" href="#">Cerrar sesión</a></li>
+                   <li><%=link_to 'Acceder', '#myModal_login', id: :login, 'data-toggle' => "modal" if !current_user%></li>
+                   <li><%=link_to 'Registrarse', '#myModal_register', id: :login, 'data-toggle' => "modal" if !current_user%></li>
+                   <li><%=link_to 'Cerrar sesión', '/users/sign_out', id: :login, 'data-toggle' => "modal" if current_user%></li>
                    <li><a href="#">Quienes somos</a></li>
                    <li><a href="#">Condiciones</a></li>
                   </ul>
@@ -73,8 +73,8 @@
         <div class="modal-content">
             <div class="modal-body">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h3>Recuperar contraseña</h3>
-                <%= render "devise/shared/recoverypass" %>
+              <h3>Recuperar contraseña</h3>
+              <%= render "devise/shared/recoverypass" %>
             </div>
         </div>
     </div>
