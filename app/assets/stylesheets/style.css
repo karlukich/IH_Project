@@ -48,3 +48,23 @@ h3 {
 .btn_sign {
     margin-top: 10px;
 }
+
+.full-height {
+    height: 90vh;
+    margin: 0px;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.center-box {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
