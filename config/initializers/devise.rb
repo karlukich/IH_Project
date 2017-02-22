@@ -12,6 +12,8 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
+  config.mailer_sender = "ironhack.project@gmail.com"
+
   # config.action_mailer.smtp_settings = {
   # address: “smtp.gmail.com”,
   # port: 587,
